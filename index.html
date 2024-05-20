@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            /* width: 300px; */
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+            /* border: black solid; */
+        }
+
+        #image1,
+        #image2 {
+            display: block;
+            margin: auto;
+        
+        }
+
+        #image1 {
+            margin-bottom: 10px;
+            margin-top: 0;
+            height: 235px;
+            width: 200px;
+        }
+
+        #image2 {
+            height: 100px;
+            width: 200px;
+        }
+
+        #para {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            width: 300px;
+            font-size: medium 200px;
+        }
+
+        #para2 {
+            font-size: small 85px;
+            color: gray;
+        }
+
+        .button {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            background-color: green;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            height: 30px;
+            font-size: 15px;
+            /* padding: 20px; */
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .color {
+            margin: 20px;
+            background-color: greenyellow;
+            width: 50px;
+            height: 10px;
+        }
+
+        .color2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(15, 14, 14, 0.749);
+            margin: 20px auto;
+            width: 130px;
+            height: 15px;
+            border-radius: 5px;
+        }
+
+        .color3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: rgba(44, 225, 12, 0.749);
+            margin: 50px auto;
+            width: 50px;
+            height: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="img">
+            <img src="cow.png" alt="cow" id="image1">
+            <img src="logo.png" alt="logo" id="image2">
+            <p id="para">WEAR THE WELLNESS <br>
+                FEEL THE MOO-TIVATION</p>
+            <div class="color"></div>
+            <p id="para2">WHERE EVERY MOO MATTERS</p>
+            <div class="color2 centered">
+                <div class="color3 centered"></div>
+            </div>
+            <button class="button" id="getStartedButton"> <span>Get Started</span></button>
+        </div>
+    </div>
+
+    <script>
+    
+        var button = document.getElementById('getStartedButton');
+
+        button.addEventListener('click', function () {
+        
+            window.location.href = 'login.html'; 
+        });
+    </script>
+</body>
+
+</html>
